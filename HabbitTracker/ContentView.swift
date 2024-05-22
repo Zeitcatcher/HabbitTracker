@@ -15,17 +15,21 @@ struct ContentView: View {
             ScrollView {
                 ForEach(0..<10) { _ in
                     HStack {
-                        Text("Test text")
-                        Spacer()
-                        HStack {
-                            ForEach(0..<7) { _ in
-                                Circle()
-                                    .fill(color)
-                                    .frame(width: 10, height: 10)
+                        NavigationLink {
+                            AddNewHabbitView()
+                        } label: {
+                            Text("Test text")
+                            Spacer()
+                            HStack {
+                                ForEach(0..<7) { _ in
+                                    Circle()
+                                        .fill(color)
+                                        .frame(width: 10, height: 10)
+                                }
                             }
                         }
+                        .padding()
                     }
-                    .padding()
                 }
                 .navigationTitle("Habbits")
             }

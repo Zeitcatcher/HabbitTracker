@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AddNewHabbitView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @State private var habbitName = ""
     @State private var habbitDescription = ""
     
@@ -30,13 +32,18 @@ struct AddNewHabbitView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") { }
+                    Button("Save") {
+                        dismiss()
+                    }
                 }
                 
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { }
+                    Button("Cancel") {
+                        dismiss()
+                    }
                 }
             }
+            .navigationBarBackButtonHidden()
         }
     }
 }
