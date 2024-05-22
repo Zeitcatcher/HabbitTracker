@@ -11,6 +11,7 @@
 		D97848672BFD9532003884C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97848662BFD9532003884C3 /* ContentView.swift */; };
 		D97848692BFD9533003884C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97848682BFD9533003884C3 /* Assets.xcassets */; };
 		D978486C2BFD9533003884C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D978486B2BFD9533003884C3 /* Preview Assets.xcassets */; };
+		D97848732BFD9A5A003884C3 /* AddNewHabbitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97848722BFD9A5A003884C3 /* AddNewHabbitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D97848662BFD9532003884C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D97848682BFD9533003884C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D978486B2BFD9533003884C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D97848722BFD9A5A003884C3 /* AddNewHabbitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewHabbitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				D97848642BFD9532003884C3 /* HabbitTrackerApp.swift */,
 				D97848662BFD9532003884C3 /* ContentView.swift */,
+				D97848722BFD9A5A003884C3 /* AddNewHabbitView.swift */,
 				D97848682BFD9533003884C3 /* Assets.xcassets */,
 				D978486A2BFD9533003884C3 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				D97848672BFD9532003884C3 /* ContentView.swift in Sources */,
 				D97848652BFD9532003884C3 /* HabbitTrackerApp.swift in Sources */,
+				D97848732BFD9A5A003884C3 /* AddNewHabbitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

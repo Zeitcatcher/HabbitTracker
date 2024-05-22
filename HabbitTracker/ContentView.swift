@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var color = Color.red
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                ForEach(0..<10) { _ in
+                    HStack {
+                        Text("Test text")
+                        Spacer()
+                        HStack {
+                            ForEach(0..<7) { _ in
+                                Circle()
+                                    .fill(color)
+                                    .frame(width: 10, height: 10)
+                            }
+                        }
+                    }
+                    .padding()
+                }
+                .navigationTitle("Habbits")
+            }
         }
-        .padding()
     }
 }
 
