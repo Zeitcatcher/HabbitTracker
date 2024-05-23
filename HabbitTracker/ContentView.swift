@@ -20,8 +20,14 @@ struct ContentView: View {
                         } label: {
                             Text("Test text")
                             Spacer()
-                            HStack {
-                                ForEach(0..<7) { _ in
+                        }
+                        .padding()
+                        
+                        HStack {
+                            ForEach(0..<7) { _ in
+                                Button {
+                                    //some code for button action
+                                } label: {
                                     Circle()
                                         .fill(color)
                                         .frame(width: 10, height: 10)
