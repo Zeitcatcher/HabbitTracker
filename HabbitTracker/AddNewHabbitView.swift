@@ -10,8 +10,10 @@ import SwiftUI
 struct AddNewHabbitView: View {
     @Environment(\.dismiss) var dismiss
     
-    @State private var habbitName = ""
-    @State private var habbitDescription = ""
+    @State private var habbitName = "test habbit name"
+    @State private var habbitDescription = "test habbit description"
+    
+    var habbits: AllHabbits
     
     var body: some View {
         NavigationStack {
@@ -33,6 +35,9 @@ struct AddNewHabbitView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
+                        let habbit = Habbit(name: habbitName, description: habbitDescription)
+                        habbits.habbitList.append(habbit)
+                        print("Item saved")
                         dismiss()
                     }
                 }
@@ -49,5 +54,5 @@ struct AddNewHabbitView: View {
 }
 
 #Preview {
-    AddNewHabbitView()
+    AddNewHabbitView(habbits: AllHabbits())
 }

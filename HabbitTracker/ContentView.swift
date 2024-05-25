@@ -8,36 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var color = Color.red
+    @State private var doneColor = Color.green
+    @State private var notDoneColor = Color.red
+    
+    @State private var habbits = AllHabbits()
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                ForEach(0..<10) { _ in
-                    HStack {
-                        NavigationLink {
-                            AddNewHabbitView()
-                        } label: {
-                            Text("Test text")
-                            Spacer()
-                        }
-                        .padding()
-                        
-                        HStack {
-                            ForEach(0..<7) { _ in
-                                Button {
-                                    //some code for button action
-                                } label: {
-                                    Circle()
-                                        .fill(color)
-                                        .frame(width: 10, height: 10)
-                                }
-                            }
-                        }
-                        .padding()
-                    }
-                }
+                HabbitSection(title: "Habbits", habbits: habbits.habbitList)
                 .navigationTitle("Habbits")
+            }
+            .toolbar {
+                NavigationLink {
+                    AddNewHabbitView(habbits: AllHabbits())
+                } label: {
+                    Label("Add", systemImage: "plus")
+                    Spacer()
+                }
             }
         }
     }
